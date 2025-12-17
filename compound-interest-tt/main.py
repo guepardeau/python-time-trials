@@ -20,7 +20,7 @@ while True:
 while True:
     try:
         interest_rate = (float(input("Please enter the interest rate (e.g. 2.5): ")))
-        if interest_rate > 0:
+        if interest_rate >= 0:
             interest_rate = interest_rate/100
             break
         else:
