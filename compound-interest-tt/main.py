@@ -25,8 +25,20 @@ while True:
     except ValueError:
         print("Please enter a Numerical Value only: ")
 
+while True:
+        payouts_per_year = (input("Please enter how often you are expecting to be paid interest, i.e Daily, Monthly or Yearly: ").strip().lower())
+        if payouts_per_year == "daily":
+            payouts_per_year = 365
+            break
+        elif payouts_per_year == "monthly":
+            payouts_per_year = 12
+            break
+        elif payouts_per_year == "yearly":
+            payouts_per_year = 1
+            break
+        else:
+            print(f"{payouts_per_year} is not valid. Please type daily, monthly or yearly: ")
 
-payouts_per_year = None
 time = None
 amount = None
 
