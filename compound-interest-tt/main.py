@@ -39,6 +39,15 @@ while True:
         else:
             print(f"{payouts_per_year} is not valid. Please type daily, monthly or yearly: ")
 
-time = None
+while True:
+    try:
+        time = int(input("Enter the number of years you plan to invest: "))
+        if time > 0:
+            break
+        else:
+            print("The number of years must be positive: ")
+    except ValueError:
+             print("Please enter the integer of years you're investing e.g '8' for 8 years: ")
+
 amount = None
 
