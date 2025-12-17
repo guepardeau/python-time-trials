@@ -1,3 +1,5 @@
+from compound import compound
+
 while True:
     currency = input("Select Currency ($ for USD, £ for GBP, € for EUR)")
     if currency == "$" or currency == "£" or currency == "€":
@@ -19,6 +21,7 @@ while True:
     try:
         interest_rate = (float(input("Please enter the interest rate (e.g. 2.5): ")))
         if interest_rate > 0:
+            interest_rate = interest_rate/100
             break
         else:
             print("Interest Rate must be greater than 0: ")
@@ -49,5 +52,7 @@ while True:
     except ValueError:
              print("Please enter the integer of years you're investing e.g '8' for 8 years: ")
 
-amount = None
+amount = 0
+amount = compound(amount, principal, interest_rate, payouts_per_year, time)
+print((f"Your total after {time} year(s) is {currency}{amount:.2f}."))   
 
